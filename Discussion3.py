@@ -4,17 +4,22 @@ class Rectangle():
     # Create the constructor "__init__" method
 
     # YOUR CODE HERE
+    def __init__(self, width, length):
+        self.width = width
+        self.length = length
 
 
 
     # Create the "__str__" method
-
+    def __str__(self):
+        return str(self.width) + ", " + str(self.length)
     # YOUR CODE HERE
 
 
 
     # Create the "area_calculator" method
-
+    def area_calculator(self):
+        return (self.width * self.length)
     # YOUR CODE HERE
 
 
@@ -22,7 +27,8 @@ class Rectangle():
     # Create the "__eq__" method
     # 
     # Returns a boolean value
-
+    def __eq__(self, other):
+        return self.width == other.width and self.length == other.length
     # YOUR CODE HERE
 
 
@@ -42,6 +48,12 @@ def main():
     print("Area:", r2.area_calculator())
     # call the __eq__ method
     print(r1 == r2)
+    print()
+
+    r3 = Rectangle(10, 10)
+    print(r3)
+    print("Area:", r3.area_calculator())
+    print(r1 == r3)
     print()
 
     # you can create additional rectangle objects to 
